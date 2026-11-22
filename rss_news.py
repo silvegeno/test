@@ -1,5 +1,6 @@
 # Парсинг RSS
 import feedparser
+from translate import Translator
 
 
 
@@ -18,6 +19,13 @@ def parse_rss(rss_source: str, limit: int = 5) -> list[dict[str, str]]:
     return news_list
 
 
+def translate_to_ru(items: list[dict[str, str]], from_lang: str = "en") -> list[dict[str, str]]:
+    translator = Translator(from_lang=from_lang, to_lang="ru")
+    for item in items:
+        item['title'] = translator.translate(item['title'])
+        item['description'] = translator.translate(item['description'])
+    return items
+
 def print_rss(news_list: list[dict[str, str]]):
     for value in news_list:
         print(value['published'])
@@ -33,5 +41,6 @@ if __name__ == "__main__":
     #rss_url = "https://shir-man.com/api/rss"
 
     news_list = parse_rss(rss_source, 3)
-    print_rss(news_list)
+    news_list_ru = translate_to_ru(news_list)
+    print_rss(news_list_ru)
     
