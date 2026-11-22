@@ -4,9 +4,9 @@ import feedparser
 
 
 # Берем срез первых 5 элементов из списка entries
-def parse_rss(rss_url: str, limit: int = 5) -> list[dict[str, str]]:
+def parse_rss(rss_source: str, limit: int = 5) -> list[dict[str, str]]:
     news_list = []      # список ловарей с новостями
-    feed = feedparser.parse(rss_url, agent="Mozilla/5.0")
+    feed = feedparser.parse(rss_source, agent="Mozilla/5.0")
     for entry in feed.entries[:limit]:
         news_dict = {
             'published': entry.get('published', 'Не указана'),
@@ -28,11 +28,10 @@ def print_rss(news_list: list[dict[str, str]]):
 
 
 if __name__ == "__main__":
-    rss_url = "https://www.wired.com/feed/tag/ai/latest/rss"
-    #rss_url = "https://www.allsides.com/rss/news"
+    rss_source = "https://www.wired.com/feed/tag/ai/latest/rss"
+    #rss_source = "https://www.allsides.com/rss/news"
     #rss_url = "https://shir-man.com/api/rss"
 
-    news_list = parse_rss(rss_url, 3)
-    #print(news_list)
+    news_list = parse_rss(rss_source, 3)
     print_rss(news_list)
     
