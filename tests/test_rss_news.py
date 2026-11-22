@@ -9,7 +9,7 @@ class ParseRssTests(unittest.TestCase):
         self.assertEqual(len(news_list), 1)
         self.assertEqual(
             news_list[0]["title"],
-            "The Outages Are Just Getting Started",
+            "The Outages Are Just Getting Started неверный",
         )
 
 rss_source = """
