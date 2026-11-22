@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101311">
+    <title>Новости об искусственном интеллекте на русском — AI News</title>
+    <meta name="description" content="Новости об искусственном интеллекте на русском из ленты Wired: автоматический перевод, карточки публикаций и доступ к демо AI News.">
+    <link rel="canonical" href="https://rss-ai.praktik-ai.ru/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="preload" href="/assets/landing/fonts/Manrope-latin.v1.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/landing/fonts/Manrope-cyrillic.v1.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/assets/landing/fonts/DMMono-latin.v1.woff2" as="font" type="font/woff2" crossorigin>
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="AI News — новости об искусственном интеллекте на русском">
+    <meta property="og:description" content="Лента Wired про ИИ, карточки с переведёнными заголовками и доступ к демо по ссылке.">
+    <meta property="og:image" content="https://rss-ai.praktik-ai.ru/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://rss-ai.praktik-ai.ru/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="/assets/landing/tokens.v1.css">
+    <link rel="stylesheet" href="/assets/landing/base.v1.css">
+    <link rel="stylesheet" href="/assets/landing/styles.v1.css">
+    <script src="/assets/landing/app.v1.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "SoftwareApplication",
+            "name": "AI News",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Web",
+            "description": "Демо-лента новостей Wired об искусственном интеллекте с машинным переводом на русский язык.",
+            "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RUB", "description": "Демо-доступ по заявке" },
+            "url": "https://rss-ai.praktik-ai.ru/"
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Нужна регистрация?", "acceptedAnswer": { "@type": "Answer", "text": "Нет. Доступ выдаётся ссылкой, ссылка действует 24 часа." } },
+              { "@type": "Question", "name": "Почему перевод иногда корявый?", "acceptedAnswer": { "@type": "Answer", "text": "Он машинный, без редактора. Оригинал открывается рядом по ↗." } },
+              { "@type": "Question", "name": "Откуда новости?", "acceptedAnswer": { "@type": "Answer", "text": "Одна лента Wired про ИИ; каждая карточка ссылается на wired.com." } },
+              { "@type": "Question", "name": "Можно добавить свою ленту?", "acceptedAnswer": { "@type": "Answer", "text": "В демо нет. В коде источник задаётся переменной RSS_FEED_URL." } },
+              { "@type": "Question", "name": "Данные сохраняются?", "acceptedAnswer": { "@type": "Answer", "text": "Нет, базы у приложения нет. Кэш живёт в памяти процесса и пропадает при перезапуске контейнера." } },
+              { "@type": "Question", "name": "Сколько стоит?", "acceptedAnswer": { "@type": "Answer", "text": "Демо бесплатное: платных запросов внутри нет, считаются только просмотры страниц." } }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К содержимому</a>
+    <header class="site-header wrap">
+      <a class="brand" href="/" aria-label="AI/NEWS — главная">
+        <span class="brand-mark" aria-hidden="true">A</span><span>AI<span class="brand-slash">/</span>NEWS</span>
+      </a>
+      <nav class="header-nav" aria-label="Основная навигация">
+        <a class="portfolio-link" href="https://praktik-ai.ru">Портфолио <span aria-hidden="true">↗</span></a>
+        <a class="button button-small" href="#access">Получить доступ <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> AI NEWS <span class="eyebrow-divider">/</span> ЛИЧНЫЙ ПРОЕКТ</p>
+          <h1 id="hero-title">Новости об искусственном интеллекте <span>на русском</span></h1>
+          <p class="hero-lede">Лента Wired про ИИ → карточки с переведёнными заголовками. FastAPI и Docker, обновление раз в 15 минут.</p>
+          <div class="hero-actions">
+            <a class="button" href="#access">Получить доступ <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="/">Открыть демо <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="hero-note"><span aria-hidden="true">01</span> Демо открывается по персональной ссылке на 24 часа</p>
+        </div>
+        <figure class="hero-visual">
+          <div class="visual-label"><span>ЖИВОЙ ИНТЕРФЕЙС</span><span>WIRED · AI</span></div>
+          <img src="/assets/landing/hero.v1.webp" alt="Снимок AI News: список из пяти публикаций Wired с русскими заголовками, датами и краткими описаниями" width="1280" height="800" fetchpriority="high">
+          <figcaption><span class="caption-dot" aria-hidden="true"></span> Карточки новостей из работающего демо</figcaption>
+        </figure>
+        <div class="hero-index" aria-hidden="true"><span>RSS → RU</span><span>2026</span></div>
+      </section>
+
+      <section class="intro-band" aria-label="Кратко о проекте">
+        <div class="wrap intro-band-inner">
+          <p>Одна лента<span>·</span> Перевод на русский<span>·</span> Без аккаунта внутри демо</p>
+          <a href="#how-it-works">КАК ЭТО УСТРОЕНО <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <section class="section wrap" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="eyebrow">01 / ВОЗМОЖНОСТИ</p>
+          <div>
+            <h2 id="about-title">Новости об искусственном интеллекте на русском — коротко и по делу</h2>
+            <p class="section-intro">AI News превращает одну англоязычную RSS-ленту в понятные карточки. Это небольшой учебный стенд: можно посмотреть на результат и увидеть, как связаны источник, перевод и веб-интерфейс.</p>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-no">01</span><img src="/assets/icons/rss.svg" alt="" width="28" height="28" loading="lazy">
+            <h3>Берёт публикации из Wired</h3><p>Скрипт читает RSS Wired с тегом AI и получает для каждой позиции заголовок, дату публикации, описание и ссылку на оригинал.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-no">02</span><img src="/assets/icons/language.svg" alt="" width="28" height="28" loading="lazy">
+            <h3>Переводит на русский</h3><p>Заголовки и описания автоматически переводятся через Microsoft Translator. Редактора нет, поэтому рядом с переводом всегда доступен оригинал статьи.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-no">03</span><img src="/assets/icons/cards.svg" alt="" width="28" height="28" loading="lazy">
+            <h3>Показывает карточки и JSON</h3><p>На странице видно дату, номер публикации, заголовок и краткий текст. API по адресу <code>/api/news</code> отдаёт те же материалы в JSON.</p>
+          </article>
+          <article class="feature-card">
+            <span class="feature-no">04</span><img src="/assets/icons/cache.svg" alt="" width="28" height="28" loading="lazy">
+            <h3>Кэширует ответ 15 минут</h3><p>Повторный просмотр в течение этого времени использует кэш приложения. Лента и переводчик не вызываются заново на каждый запрос страницы.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="how-section" id="how-it-works" aria-labelledby="how-title">
+        <div class="wrap section">
+          <div class="section-heading">
+            <p class="eyebrow">02 / МАРШРУТ</p>
+            <div><h2 id="how-title">От заявки до оригинальной статьи — четыре шага</h2><p class="section-intro">Демо доступно по ссылке. Внутри не нужно создавать аккаунт или настраивать профиль.</p></div>
+          </div>
+          <ol class="steps-list">
+            <li><span class="step-number">01</span><div><h3>Запросите приглашение</h3><p>Отправьте короткую заявку через форму или получите ссылку от автора. Шлюз выдаёт доступ с cookie <code>demo_sid</code> на 24 часа.</p></div><span class="step-arrow" aria-hidden="true">↘</span></li>
+            <li><span class="step-number">02</span><div><h3>Откройте ленту</h3><p>Сервер отдаёт страницу с карточками: русский заголовок, время публикации, порядковый номер и перевод описания.</p></div><span class="step-arrow" aria-hidden="true">↘</span></li>
+            <li><span class="step-number">03</span><div><h3>Обновите список</h3><p>Кнопка «Обновить» запрашивает <code>/api/news</code>. Если кэш ещё свежий, ответ возвращается из памяти приложения.</p></div><span class="step-arrow" aria-hidden="true">↘</span></li>
+            <li><span class="step-number">04</span><div><h3>Читайте первоисточник</h3><p>Ссылка со значком ↗ ведёт на статью Wired. Машинный перевод помогает сориентироваться, а оригинал — уточнить контекст.</p></div><span class="step-arrow" aria-hidden="true">↗</span></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section wrap examples" aria-labelledby="examples-title">
+        <div class="section-heading">
+          <p class="eyebrow">03 / ВНУТРИ ДЕМО</p>
+          <div><h2 id="examples-title">Так выглядит новостная лента</h2><p class="section-intro">Два снимка сделаны с запущенного приложения. На них видны реальные карточки, состояние ленты и ссылка к материалу Wired.</p></div>
+        </div>
+        <div class="shot-grid">
+          <figure class="shot-card shot-wide"><img src="/assets/landing/shots/news-desktop.v1.webp" alt="Полный снимок настольной версии AI News с русскими карточками Wired" width="1265" height="1573" loading="lazy"><figcaption><span>01</span><span>Лента на широком экране</span></figcaption></figure>
+          <figure class="shot-card shot-mobile"><img src="/assets/landing/shots/news-mobile.v1.webp" alt="Мобильный экран AI News с карточками публикаций Wired" width="500" height="844" loading="lazy"><figcaption><span>02</span><span>Тот же список на телефоне</span></figcaption></figure>
+        </div>
+      </section>
+
+      <section class="spec-section" aria-labelledby="spec-title">
+        <div class="wrap section">
+          <div class="section-heading">
+            <p class="eyebrow">04 / ГРАНИЦЫ</p>
+            <div><h2 id="spec-title">Что внутри демо</h2><p class="section-intro">У проекта ясный небольшой масштаб: одна тема, один источник, без базы публикаций и поиска.</p></div>
+          </div>
+          <table class="spec-table">
+            <thead><tr><th scope="col">Параметр</th><th scope="col">Значение</th></tr></thead>
+            <tbody>
+              <tr><th scope="row" data-label="Параметр">Источник</th><td data-label="Значение">Одна лента Wired, тег AI, до 10 последних публикаций</td></tr>
+              <tr><th scope="row" data-label="Параметр">Перевод</th><td data-label="Значение">Машинный (Microsoft Translator), без редактора</td></tr>
+              <tr><th scope="row" data-label="Параметр">Обновление кэша</th><td data-label="Значение">15 минут</td></tr>
+              <tr><th scope="row" data-label="Параметр">Доступ</th><td data-label="Значение">По ссылке, 24 часа</td></tr>
+              <tr><th scope="row" data-label="Параметр">Чего не делает</th><td data-label="Значение">Не добавляет другие ленты; нет поиска, фильтров, истории и базы публикаций</td></tr>
+            </tbody>
+          </table>
+          <p class="spec-footnote"><span aria-hidden="true">*</span> Источник можно заменить в коде: адрес RSS задаётся переменной <code>RSS_FEED_URL</code>.</p>
+        </div>
+      </section>
+
+      <section class="section wrap audience" aria-labelledby="audience-title">
+        <div class="section-heading">
+          <p class="eyebrow">05 / ДЛЯ КОГО</p>
+          <div><h2 id="audience-title">Три способа посмотреть на AI News</h2><p class="section-intro">Лента одновременно решает простую задачу чтения и показывает компактный пример веб-приложения.</p></div>
+        </div>
+        <div class="audience-grid">
+          <article><span class="audience-kicker">ЧИТАТЕЛЮ</span><h3>Следить за темой</h3><p>Посмотреть, что пишут о технологиях ИИ, и быстро понять публикацию без чтения на английском. Для деталей можно перейти к статье Wired.</p></article>
+          <article><span class="audience-kicker">РАЗРАБОТЧИКУ</span><h3>Изучить стенд</h3><p>Разобрать связку FastAPI, Docker и шлюза доступа на одном домене. Страница и API обслуживаются одним приложением.</p></article>
+          <article><span class="audience-kicker">АВТОРУ ПРОЕКТА</span><h3>Взять за основу</h3><p>Посмотреть, как устроена RSS-лента и её вывод. Для собственного агрегатора источник задаётся переменной окружения <code>RSS_FEED_URL</code>.</p></article>
+        </div>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div class="wrap section faq-layout">
+          <div class="faq-heading"><p class="eyebrow">06 / FAQ</p><h2 id="faq-title">Частые вопросы</h2><p>Если коротко: это небольшое демо, которое удобно посмотреть и обсудить.</p></div>
+          <div class="faq-list">
+            <details><summary>Нужна регистрация?</summary><p>Нет. Доступ выдаётся ссылкой, ссылка действует 24 часа.</p></details>
+            <details><summary>Почему перевод иногда корявый?</summary><p>Он машинный, без редактора. Оригинал открывается рядом по ↗.</p></details>
+            <details><summary>Откуда новости?</summary><p>Одна лента Wired про ИИ; каждая карточка ссылается на wired.com.</p></details>
+            <details><summary>Можно добавить свою ленту?</summary><p>В демо нет. В коде источник задаётся переменной <code>RSS_FEED_URL</code>.</p></details>
+            <details><summary>Данные сохраняются?</summary><p>Нет, базы у приложения нет. Кэш живёт в памяти процесса и пропадает при перезапуске контейнера.</p></details>
+            <details><summary>Сколько стоит?</summary><p>Демо бесплатное: платных запросов внутри нет, считаются только просмотры страниц.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="access-section" id="access" aria-labelledby="access-title">
+        <div class="wrap access-panel">
+          <div class="access-copy"><p class="eyebrow">07 / ПРИГЛАШЕНИЕ</p><h2 id="access-title">Посмотреть AI News?</h2><p>Напишите, что хотите посмотреть. Ссылка приходит в Telegram после подтверждения.</p><p class="access-footnote">Заявка — это запрос доступа к демо, а не регистрация в приложении.</p></div>
+          <div class="access-form-wrap">
+            <form id="access-form" class="access-form" novalidate>
+              <label for="note">Что хотите посмотреть <span>(необязательно)</span></label>
+              <textarea id="note" name="note" maxlength="500" rows="3" placeholder="Например: как устроена лента и перевод"></textarea>
+              <div class="form-bottom"><span id="char-count" class="char-count">0 / 500</span><button class="button" id="submit-button" type="submit">Запросить доступ <span aria-hidden="true">↗</span></button></div>
+              <p id="form-status" class="form-status" aria-live="polite" role="status"></p>
+              <noscript><p class="noscript-note">Чтобы запросить приглашение без JavaScript, напишите в <a href="https://t.me/praktik_ai_portfolio_bot">Telegram автору проекта ↗</a>.</p></noscript>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-top">
+        <a class="brand footer-brand" href="/" aria-label="AI/NEWS — в начало"><span class="brand-mark" aria-hidden="true">A</span><span>AI<span class="brand-slash">/</span>NEWS</span></a>
+        <p>Перевод машинный и может содержать неточности.</p>
+        <nav aria-label="Ссылки в подвале"><a href="https://praktik-ai.ru">Портфолио ↗</a><a href="https://t.me/praktik_ai_portfolio_bot">Telegram ↗</a><a href="/privacy/">Политика конфиденциальности</a></nav>
+      </div>
+      <div class="wrap footer-bottom"><span>© <span id="year">2026</span> AI News</span><span>Сделано для чтения, не для бесконечной прокрутки.</span></div>
+    </footer>
+  </body>
+</html>

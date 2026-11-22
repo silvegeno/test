@@ -70,3 +70,5 @@ python3 /opt/demo-gate/gate.py grant --project rss-ai --tier client   # выда
 .\.venv\Scripts\python.exe -m py_compile rss_news.py app.py
 docker build -t rss-ai:local .
 ```
+
+Статический лендинг демо находится в каталоге `landing/`: главная страница, политика конфиденциальности, локальные изображения и шрифты, SEO-файлы и форма заявки на доступ.
