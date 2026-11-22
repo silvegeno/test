@@ -1,4 +1,6 @@
 # Как отправлять проект на GitHub
+python -m venv .venv
+.venv\Scripts\activate.bat
 
 ## Вариант 1 — репозиторий на GitHub уже создан с README
 
