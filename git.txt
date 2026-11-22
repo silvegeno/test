@@ -2,6 +2,9 @@
 python -m venv .venv
 .venv\Scripts\activate.bat
 
+Тест:
+.\.venv\Scripts\python.exe -m unittest discover -s . -p "test_*.py" -v
+
 ## Вариант 1 — репозиторий на GitHub уже создан с README
 
 Самый простой путь — сначала скачать репозиторий, чтобы локальная папка и GitHub начинали с одной истории:
@@ -54,6 +57,10 @@ git push
 ```
 
 Первый `git push -u origin main` запоминает, куда отправлять текущую ветку. Поэтому позже обычно достаточно `git push`.
+
+Другая ветка:
+git switch -c feature/rss-ai-news
+git status
 
 ## Как узнать имя ветки и адрес репозитория
 

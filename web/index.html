@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#101311">
+    <meta name="description" content="Свежие новости об искусственном интеллекте на русском языке.">
+    <title>AI News — новости искусственного интеллекта</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="AI News — главная">
+          <span class="brand-mark" aria-hidden="true">A</span>
+          <span>AI<span class="brand-light">/</span>NEWS</span>
+        </a>
+        <span class="source-label"><span class="live-dot"></span> RSS · WIRED</span>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <p class="eyebrow">ТЕХНОЛОГИИ · ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ</p>
+          <div class="intro-row">
+            <div>
+              <h1 id="page-title">Что нового<br><span>в мире ИИ?</span></h1>
+              <p class="lede">Свежие материалы из Wired — переведены на русский.</p>
+            </div>
+            <button id="refresh" class="refresh-button" type="button">
+              <span class="refresh-icon" aria-hidden="true">↻</span>
+              <span>Обновить</span>
+            </button>
+          </div>
+          <div class="rule"><span></span></div>
+          <div class="feed-meta">
+            <span id="result-count">ЗАГРУЖАЕМ ЛЕНТУ</span>
+            <span id="updated-at"></span>
+          </div>
+        </section>
+
+        <section id="news-list" class="news-list" aria-live="polite" aria-busy="true">
+          <p class="message">Загружаем свежие новости…</p>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Перевод создаётся автоматически и может содержать неточности.</span>
+        <a href="https://www.wired.com/feed/tag/ai/latest/rss" target="_blank" rel="noopener noreferrer">Оригинальная RSS-лента ↗</a>
+      </footer>
+    </div>
+  </body>
+</html>
