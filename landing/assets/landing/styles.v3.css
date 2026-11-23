@@ -31,7 +31,7 @@
 .section { padding-block: 95px; }
 .section-heading { display: grid; grid-template-columns: minmax(140px, .33fr) minmax(0, 1fr); gap: 30px; align-items: start; margin-bottom: 39px; }
 .section-heading .eyebrow { padding-top: 9px; color: var(--accent); }
-.section-heading h2, .faq-heading h2, .access-copy h2 { max-width: 730px; margin-bottom: 16px; font-size: clamp(30px, 4vw, 45px); letter-spacing: -.04em; }
+.section-heading h2, .faq-heading h2 { max-width: 730px; margin-bottom: 16px; font-size: clamp(30px, 4vw, 45px); letter-spacing: -.04em; }
 .section-intro { max-width: 680px; color: var(--muted); font-size: 16px; line-height: 1.75; }
 .feature-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .feature-card { min-height: 252px; position: relative; padding: 24px 22px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -47,12 +47,11 @@
 .steps-list p { max-width: 720px; color: var(--muted); font-size: 14px; line-height: 1.65; }
 .step-arrow { color: var(--accent); font-size: 17px; line-height: 1; text-align: right; }
 .examples .section-intro { max-width: 660px; }
-.shot-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(230px, .6fr); gap: 20px; align-items: start; }
+.shot-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; align-items: start; }
 .shot-card { overflow: hidden; margin: 0; border: 1px solid var(--line); border-radius: 6px; background: var(--panel); }
 .shot-card img { width: 100%; object-fit: cover; object-position: top; }
+.shot-wide { width: 100%; max-width: 760px; margin-inline: auto; }
 .shot-wide img { aspect-ratio: 1265 / 1573; }
-.shot-mobile { max-width: 320px; justify-self: center; }
-.shot-mobile img { aspect-ratio: 500 / 844; }
 .shot-card figcaption { display: flex; justify-content: space-between; gap: 14px; padding: 13px 15px; border-top: 1px solid var(--line); color: #c5cec4; font-size: 10px; }
 .shot-card figcaption span:first-child { color: var(--accent); }
 .spec-section { border-block: 1px solid var(--line); background: #141815; }
@@ -79,25 +78,11 @@
 .faq-list summary::after { content: "+"; position: absolute; top: 16px; right: 3px; color: var(--accent); font: 20px/1 var(--mono); }
 .faq-list details[open] summary::after { content: "−"; }
 .faq-list details p { max-width: 590px; padding: 0 32px 18px 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
-.access-section { padding-block: 35px 80px; }
-.access-panel { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 54px; padding: clamp(25px, 5vw, 54px); border: 1px solid #414b42; border-radius: 7px; background: #171b18; }
-.access-copy .eyebrow { color: var(--accent); }
-.access-copy h2 { font-size: clamp(34px, 4vw, 46px); }
-.access-copy > p:not(.eyebrow) { color: #c5cec4; font-size: 16px; }
-.access-copy .access-footnote { margin-top: 16px; color: var(--muted) !important; font-size: 12px !important; }
-.access-form label { display: block; margin-bottom: 9px; color: var(--text); font-size: 14px; font-weight: 500; }
-.access-form label span { color: var(--muted); font-size: 12px; font-weight: 400; }
-.access-form textarea { width: 100%; min-height: 103px; resize: vertical; padding: 13px 14px; border: 1px solid #465047; border-radius: 4px; background: #101311; color: var(--text); font-size: 15px; line-height: 1.5; }
-.access-form textarea::placeholder { color: #9ca79d; opacity: 1; }
-.access-form textarea:focus-visible { outline-offset: 2px; }
-.form-bottom { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 13px; }
-.char-count { color: var(--muted); font-size: 10px; }
-.form-status { min-height: 24px; margin-top: 13px; color: #d3f899; font-size: 14px; }
-.form-status[data-state="error"] { color: #ffb4a9; }
-.form-status[data-state="success"] { color: var(--accent); }
-.form-status a { color: inherit; font-weight: 600; text-underline-offset: 3px; }
-.noscript-note { margin-top: 13px; color: var(--muted); font-size: 13px; }
-.noscript-note a { color: var(--accent); }
+.adapt-section { padding-block: 24px 80px; }
+.adapt-panel { padding: clamp(26px, 5vw, 56px); border-block: 1px solid var(--line); background: #141815; }
+.adapt-panel .eyebrow { margin-bottom: 16px; color: var(--accent); }
+.adapt-panel h2 { max-width: 780px; margin-bottom: 16px; font-size: clamp(30px, 4vw, 45px); letter-spacing: -.04em; }
+.adapt-panel > p:last-child { max-width: 800px; color: #c5cec4; font-size: 16px; line-height: 1.8; }
 .site-footer { border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; }
 .footer-top { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; align-items: center; min-height: 90px; }
 .footer-brand { color: var(--text); }
@@ -120,7 +105,6 @@
   .feature-grid { grid-template-columns: repeat(2, 1fr); }
   .feature-card { min-height: 222px; }
   .faq-layout { gap: 36px; }
-  .access-panel { gap: 28px; }
 }
 @media (max-width: 650px) {
   :root { --content: min(100% - 36px, 1040px); }
@@ -144,7 +128,7 @@
   .section { padding-block: 68px; }
   .section-heading { grid-template-columns: 1fr; gap: 10px; margin-bottom: 28px; }
   .section-heading .eyebrow { margin-bottom: 0; padding-top: 0; }
-  .section-heading h2, .faq-heading h2, .access-copy h2 { margin-bottom: 12px; font-size: clamp(29px, 8vw, 38px); }
+  .section-heading h2, .faq-heading h2 { margin-bottom: 12px; font-size: clamp(29px, 8vw, 38px); }
   .section-intro { font-size: 15px; }
   .feature-card { min-height: 230px; padding: 19px 16px; }
   .feature-card h3 { font-size: 16px; }
@@ -154,7 +138,6 @@
   .steps-list h3 { font-size: 16px; }
   .steps-list p { font-size: 13px; }
   .shot-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
-  .shot-mobile { width: min(100%, 280px); justify-self: start; }
   .spec-table, .spec-table tbody { display: block; }
   .spec-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
   .spec-table tr { display: grid; grid-template-columns: 1fr; gap: 5px; padding: 14px 0; border-bottom: 1px solid var(--line); }
@@ -169,10 +152,9 @@
   .faq-layout { grid-template-columns: 1fr; gap: 25px; }
   .faq-heading > p:last-child { max-width: 520px; }
   .faq-list summary { font-size: 15px; }
-  .access-section { padding-block: 20px 60px; }
-  .access-panel { grid-template-columns: 1fr; gap: 24px; padding: 23px 18px; }
-  .form-bottom { align-items: flex-end; }
-  .form-bottom .button { min-height: 46px; padding-inline: 13px; font-size: 11px; }
+  .adapt-section { padding-block: 20px 60px; }
+  .adapt-panel { padding: 24px 18px; }
+  .adapt-panel h2 { font-size: clamp(29px, 8vw, 38px); }
   .footer-top { grid-template-columns: 1fr; gap: 15px; padding-block: 24px; }
   .footer-top > p { text-align: left; }
   .footer-top nav { justify-content: flex-start; }

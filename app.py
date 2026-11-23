@@ -34,6 +34,13 @@ def index() -> FileResponse:
     return FileResponse(BASE_DIR / "web" / "index.html")
 
 
+@app.get("/app", include_in_schema=False)
+@app.get("/app/", include_in_schema=False)
+def demo() -> FileResponse:
+    """Страница приложения по /app/: в корне домена Caddy отдаёт лендинг."""
+    return FileResponse(BASE_DIR / "web" / "index.html")
+
+
 @app.get("/health", tags=["health"])
 def health() -> dict[str, str]:
     return {"status": "ok"}
