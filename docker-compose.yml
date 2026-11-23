@@ -5,6 +5,8 @@ services:
     restart: unless-stopped
     environment:
       RSS_FEED_URL: ${RSS_FEED_URL:-https://www.wired.com/feed/tag/ai/latest/rss}
+      TRANSLATE_SERVICE: ${TRANSLATE_SERVICE:-mymemory}
+      TRANSLATE_EMAIL: ${TRANSLATE_EMAIL:-}
     volumes:
       # Кеш переводов переживает пересоздание контейнера и не тратит квоту провайдера заново.
       - ./data:/app/data

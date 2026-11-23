@@ -43,6 +43,11 @@ def provider_name() -> str:
     return (os.getenv("TRANSLATE_SERVICE") or "mymemory").strip() or "mymemory"
 
 
+def translate_email() -> str:
+    """Контактный email для MyMemory: с ним суточный лимит в 10 раз выше."""
+    return (os.getenv("TRANSLATE_EMAIL") or "").strip()
+
+
 def _load_cache(path: Path) -> dict[str, str]:
     try:
         raw = json.loads(path.read_text(encoding="utf-8"))
@@ -70,7 +75,14 @@ def _translate_text(text: str) -> str:
     """Один вызов провайдера. Отдельная функция, чтобы её можно было подменить в тестах."""
     from translate import Translator
 
-    return Translator(from_lang=SOURCE_LANG, to_lang=TARGET_LANG, service=provider_name()).translate(text)
+    email = translate_email()
+    extra = {"email": email} if email else {}
+    return Translator(
+        from_lang=SOURCE_LANG,
+        to_lang=TARGET_LANG,
+        provider=provider_name(),
+        **extra,
+    ).translate(text)
 
 
 def translate_to_ru(
