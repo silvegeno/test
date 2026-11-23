@@ -14,6 +14,7 @@ RUN python -m pip install --no-cache-dir --upgrade pip \
 COPY --chown=10001:10001 rss_news.py app.py ./
 COPY --chown=10001:10001 web/ ./web/
 COPY --chown=10001:10001 static/ ./static/
+RUN mkdir -p /app/data && chown 10001:10001 /app/data
 
 USER 10001:10001
 EXPOSE 8000

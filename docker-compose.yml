@@ -5,6 +5,9 @@ services:
     restart: unless-stopped
     environment:
       RSS_FEED_URL: ${RSS_FEED_URL:-https://www.wired.com/feed/tag/ai/latest/rss}
+    volumes:
+      # Кеш переводов переживает пересоздание контейнера и не тратит квоту провайдера заново.
+      - ./data:/app/data
     ports:
       - "127.0.0.1:${RSS_AI_PORT:-8140}:8000"
     read_only: true

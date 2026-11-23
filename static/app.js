@@ -2,6 +2,7 @@ const newsList = document.querySelector("#news-list");
 const refreshButton = document.querySelector("#refresh");
 const resultCount = document.querySelector("#result-count");
 const updatedAt = document.querySelector("#updated-at");
+const translationNotice = document.querySelector("#translation-notice");
 
 function appendText(parent, tag, className, text) {
   const element = document.createElement(tag);
@@ -73,6 +74,7 @@ async function loadNews() {
     }
     const data = await response.json();
     renderNews(data.items || []);
+    if (translationNotice) translationNotice.hidden = data.translation_available !== false;
     updatedAt.textContent = data.updated_at
       ? `ОБНОВЛЕНО ${new Date(data.updated_at).toLocaleTimeString("ru-RU", { hour: "2-digit", minute: "2-digit" })}`
       : "";
@@ -82,6 +84,7 @@ async function loadNews() {
     message.setAttribute("role", "alert");
     resultCount.textContent = "ОШИБКА ЗАГРУЗКИ";
     updatedAt.textContent = "";
+    if (translationNotice) translationNotice.hidden = true;
   } finally {
     refreshButton.disabled = false;
     newsList.setAttribute("aria-busy", "false");
