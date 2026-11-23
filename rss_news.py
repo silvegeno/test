@@ -1,4 +1,4 @@
-# Парсинг RSS
+# Парсинг RSS с переводом на русский язык
 import feedparser
 from translate import Translator
 
@@ -40,7 +40,7 @@ if __name__ == "__main__":
     #rss_source = "https://www.allsides.com/rss/news"
     #rss_url = "https://shir-man.com/api/rss"
 
-    news_list = parse_rss(rss_source, 3)
+    news_list = parse_rss(rss_source, 10)
     news_list_ru = translate_to_ru(news_list)
     print_rss(news_list_ru)
     
