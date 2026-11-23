@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rss-ai.praktik-ai.ru/sitemap.xml
