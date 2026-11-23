@@ -174,3 +174,18 @@
   .feature-card img { margin-bottom: 17px; }
   .spec-table th, .spec-table td { grid-template-columns: 90px minmax(0, 1fr); gap: 8px; }
 }
+
+/* Полоса с призывом прочитать ленту: середина страницы и закрывающий блок */
+.cta-band { padding-block: 0 56px; }
+.cta-band-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; padding: clamp(22px, 4vw, 34px); border: 1px solid var(--line); background: var(--panel); }
+.cta-band-copy { max-width: 640px; }
+.cta-band h2 { margin-bottom: 8px; font-size: clamp(22px, 3vw, 30px); letter-spacing: -.03em; }
+.cta-band p { color: #c5cec4; font-size: 15px; line-height: 1.7; }
+.adapt-panel .button { margin-top: 26px; }
+@media (max-width: 720px) {
+  .cta-band { padding-block: 0 40px; }
+  .cta-band-inner { flex-direction: column; align-items: flex-start; }
+  .cta-band h2 { font-size: clamp(21px, 6vw, 27px); }
+  .cta-band p { font-size: 14px; }
+  .adapt-panel .button { margin-top: 20px; width: 100%; }
+}
